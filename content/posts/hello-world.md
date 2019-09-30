@@ -1,4 +1,5 @@
 +++ 
+draft = true
 date = 2019-09-30T19:43:44+05:30
 title = "Hello!"
 description = "My First Post"
@@ -9,5 +10,10 @@ externalLink = ""
 series = []
 +++
 
-This happens to be my first blog post. <br>
-So, <b> Hello World! </b>
+This happens to be my first blog post. <br> <br>
+<p> 
+So, 
+
+![](/images/hello.gif)
+</p>
+
