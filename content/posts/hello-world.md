@@ -1,5 +1,4 @@
 +++ 
-draft = true
 date = 2019-09-30T19:43:44+05:30
 title = "Hello!"
 description = "My First Post"
