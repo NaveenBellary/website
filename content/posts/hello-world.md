@@ -9,5 +9,10 @@ externalLink = ""
 series = []
 +++
 
-This happens to be my first blog post. <br>
-So, <b> Hello World! </b>
+This happens to be my first blog post. <br> <br>
+<p> 
+So, 
+
+![](/images/hello.gif)
+</p>
+
