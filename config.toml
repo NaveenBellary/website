@@ -1,4 +1,4 @@
-baseurl = "http://naveenbellary.dev"
+baseurl = "https://naveenbellary.netlify.com"
 title = "Naveen Bellary"
 theme = "hugo-coder"
 languagecode = "en"
