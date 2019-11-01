@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Naveen Bellary"
+title = ""
 theme = "hugo-coder"
 languagecode = "en"
 defaultcontentlanguage = "en"
@@ -13,7 +13,7 @@ pygmentscodefencesguesssyntax = true
 
 [params]
     author = "Naveen Bellary"
-    info = "Full Stack DevOps and Netflix"
+    info = ""
     description = "Naveen Bellary's personal website"
     keywords = "blog,developer,personal"
     avatarurl = "images/profile.jpg"
@@ -21,7 +21,7 @@ pygmentscodefencesguesssyntax = true
     favicon_32 = "/img/favicon-32x32.png"
     favicon_16 = "/img/favicon-16x16.png"
 
-    footercontent = "Rants of a random tech guy"
+    footercontent = "A random tech guy"
 
     hidecredits = false
     hidecopyright = false
@@ -49,11 +49,11 @@ pygmentscodefencesguesssyntax = true
     url = "https://twitter.com/naveen_bellary/"
 
 # Menu links
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "/posts/"
-[[menu.main]]
-    name = "About"
-    weight = 2
-    url = "/about/"
+# [[menu.main]]
+#    name = "Blog"
+#    weight = 1
+#    url  = "/posts/"
+#[[menu.main]]
+#    name = "About"
+#    weight = 2
+#    url = "/about/"
