@@ -10,6 +10,9 @@ const siteName = 'Naveen Bellary';
 const { title, description = "Naveen Bellary's personal website" } =
   Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
+// og:title carries just the page's own name; the site name belongs in
+// og:site_name, which consumers render as the attribution line.
+const ogTitle = title || siteName;
 const { pathname } = Astro.url;
 ---
 
@@ -29,7 +32,8 @@ const { pathname } = Astro.url;
       title={siteName}
       href={new URL('rss.xml', Astro.site)}
     />
-    <meta property="og:title" content={pageTitle} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:site_name" content={siteName} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
   </head>
