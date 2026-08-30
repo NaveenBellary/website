@@ -5,10 +5,6 @@ dist/
 # Dependencies
 node_modules/
 
-# Wrangler
-.wrangler/
-.dev.vars
-
 # Editors, OS, local tooling
 .idea/
 .vscode/

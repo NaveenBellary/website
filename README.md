@@ -1,8 +1,10 @@
 # website
 
-My personal website built with [Astro](https://astro.build) (Vite-based) and
-deployed to [Cloudflare Workers](https://developers.cloudflare.com/workers/)
-as static assets.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a4128e78-7592-4bd7-9de1-f6af8446e650/deploy-status)](https://app.netlify.com/sites/naveenbellary/deploys)
+
+My personal website — <https://naveenbellary.dev> — built with
+[Astro](https://astro.build) and deployed to
+[Netlify](https://www.netlify.com/).
 
 ## Development
 
@@ -31,13 +33,13 @@ The file name becomes the URL: `src/content/blog/my-post.md` → `/posts/my-post
 
 ## Deployment
 
-```sh
-npm run deploy    # builds and deploys via wrangler (needs `npx wrangler login` once)
-```
+Netlify builds and deploys automatically on push to `master`. Build settings
+live in `netlify.toml` (command `npm run build`, publish `dist/`), which
+overrides whatever is configured in the Netlify UI.
 
-Alternatively, connect this repo to Cloudflare Workers Builds in the
-Cloudflare dashboard (Workers & Pages → Create → import repository) for
-automatic deploys on push. Build command: `npm run build`, deploy command:
-`npx wrangler deploy`.
+`netlify.toml` also holds the redirects that preserve the old Hugo URLs
+(`/index.xml` → `/rss.xml`, `/sitemap.xml` → `/sitemap-index.xml`).
 
-After the first deploy, update `site` in `astro.config.mjs` to the real URL.
+> A future move to Cloudflare Workers is planned as a separate change. The
+> previous `wrangler.jsonc` can be recovered with
+> `git show e88faf7:wrangler.jsonc`.

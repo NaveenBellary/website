@@ -2,9 +2,9 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// TODO: update to the final deployed URL (workers.dev subdomain or custom
-// domain) — it is used for canonical URLs in the sitemap and RSS feed.
+// `site` is the live domain; it backs canonical URLs, the sitemap and the RSS
+// feed, so it must match what Netlify serves.
 export default defineConfig({
-  site: 'https://naveenbellary.com',
+  site: 'https://naveenbellary.dev',
   integrations: [sitemap()],
 });
