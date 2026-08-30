@@ -154,3 +154,9 @@ article header .meta {
   color: var(--muted);
   font-size: 0.9375rem;
 }
+
+/* Hugo set these side by side with calendar/clock icons; without Font
+   Awesome a separator carries the same grouping. */
+article header .meta .reading-time::before {
+  content: " · ";
+}
