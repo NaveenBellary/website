@@ -1,0 +1,43 @@
+# Netlify build configuration.
+#
+# This file takes precedence over the build settings stored in the Netlify UI,
+# which still point at the old Hugo setup (`hugo` -> publish `public/`). Astro
+# builds to `dist/`, and `public/` is now *source*, not output.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Astro 5 requires node 18.20.8 || ^20.3.0 || >=22.0.0.
+  NODE_VERSION = "22"
+
+# --- Redirects preserving Hugo's URLs -------------------------------------
+# Page URLs (/, /posts/, /posts/<slug>/, /about/) are unchanged, but the
+# generated XML endpoints moved and the taxonomy pages are gone.
+
+# Hugo served the feed at /index.xml; Astro emits /rss.xml.
+[[redirects]]
+  from = "/index.xml"
+  to = "/rss.xml"
+  status = 301
+  force = true
+
+# Hugo served /sitemap.xml; @astrojs/sitemap emits /sitemap-index.xml.
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap-index.xml"
+  status = 301
+  force = true
+
+# Hugo's taxonomy listings were never linked from the site but were in the
+# old sitemap, so send them home instead of 404ing.
+[[redirects]]
+  from = "/categories/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tags/*"
+  to = "/"
+  status = 301
