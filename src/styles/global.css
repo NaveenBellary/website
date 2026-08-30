@@ -67,39 +67,6 @@ pre {
   border-radius: 6px;
 }
 
-/* Header */
-.site-header {
-  max-width: var(--max-width);
-  width: 100%;
-  margin: 0 auto;
-  padding: 1.5rem 1.25rem;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.site-header .site-name {
-  font-weight: 600;
-  color: var(--fg);
-  font-size: 1.125rem;
-}
-
-.site-header nav {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.site-header nav a {
-  color: var(--muted);
-}
-
-.site-header nav a:hover,
-.site-header nav a[aria-current="page"] {
-  color: var(--fg);
-  text-decoration: none;
-}
-
 /* Main */
 main {
   flex: 1;
