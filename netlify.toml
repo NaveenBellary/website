@@ -9,8 +9,8 @@
   publish = "dist"
 
 [build.environment]
-  # Astro 5 requires node 18.20.8 || ^20.3.0 || >=22.0.0.
-  NODE_VERSION = "22"
+  # Astro 7 requires node >=22.12.0.
+  NODE_VERSION = "22.12"
 
 # --- Redirects preserving Hugo's URLs -------------------------------------
 # Page URLs (/, /posts/, /posts/<slug>/, /about/) are unchanged, but the
